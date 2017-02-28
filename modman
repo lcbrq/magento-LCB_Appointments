@@ -1,0 +1,8 @@
+app/code/local/LCB/Appointments                                    app/code/local/LCB/Appointments 
+app/locale/en_US/template/email/lcb_appointments.html              app/locale/en_US/template/email/lcb_appointments.html
+app/locale/pl_PL/template/email/lcb_appointments.html              app/locale/pl_PL/template/email/lcb_appointments.html
+app/locale/pl_PL/LCB_Appointments.csv                              app/locale/pl_PL/LCB_Appointments.csv   
+app/etc/modules/LCB_Appointments.xml                               app/etc/modules/LCB_Appointments.xml
+app/design/adminhtml/default/default/layout/appointments.xml       app/design/adminhtml/default/default/layout/appointments.xml
+app/design/frontend/base/default/layout/appointments.xml           app/design/frontend/base/default/layout/appointments.xml 
+app/design/frontend/base/default/template/appointments/index.phtml app/design/frontend/base/default/template/appointments/index.phtml 

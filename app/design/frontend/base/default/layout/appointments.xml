@@ -1,0 +1,24 @@
+<?xml version="1.0"?>   
+<layout version="1.0.0">
+    <appointments_index_index>   
+        <reference name="root">   
+            <action method="setTemplate">
+                <template>page/1column.phtml</template>
+            </action>   
+        </reference>   
+        <reference name="content">   
+            <block type="appointments/index" name="appointments" template="appointments/index.phtml"/>   
+        </reference>   
+    </appointments_index_index>   
+    <appointments_index_ajax>   
+        <reference name="root">   
+            <action method="setTemplate">
+                <template>page/empty.phtml</template>
+            </action>   
+        </reference>   
+        <reference name="content">   
+            <block type="appointments/index" name="appointments" template="appointments/index.phtml"/>   
+        </reference>   
+    </appointments_index_ajax>  
+</layout>   
+	
