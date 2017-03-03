@@ -51,7 +51,7 @@ class LCB_Appointments_IndexController extends Mage_Core_Controller_Front_Action
 
         $emailTemplate = Mage::getModel('core/email_template')->loadDefault('lcb_appointments_template');
 
-        $emailTemplate->setTemplateSubject('Prośba o spotkanie');
+        $emailTemplate->setTemplateSubject($this->__('Meeting Request'));
 
         $emailTemplate->setSenderName($storeName);
         $emailTemplate->setSenderEmail($storeEmail);
@@ -64,8 +64,11 @@ class LCB_Appointments_IndexController extends Mage_Core_Controller_Front_Action
         $emailTemplateVariables['message'] = $data['message'];
 
         try {
-            $emailTemplate->send($storeEmail, null, $emailTemplateVariables);
-            Mage::getSingleton('core/session')->addSuccess('Pomyślnie wysłano');
+            $emailTemplate->send($storeEmail, null, $emailTemplateVariables); //send to store
+
+            $emailTemplate->send($data['email'],null,$emailTemplateVariables); // send copy to customer
+
+            Mage::getSingleton('core/session')->addSuccess('Successfully Sent');
         } catch (Exception $error) {
             Mage::getSingleton('core/session')->addError($error->getMessage());
         }
